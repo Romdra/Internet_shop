@@ -1,1 +1,1 @@
-# internet_shop
+# Education project 
