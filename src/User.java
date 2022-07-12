@@ -1,28 +1,29 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class User {
 
     private String login;
     private String password;
     private Basket basket;
+    private BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    public User(String login, String password) {
+    public void inputLogPass() {
 
-        this.login = login;
-        this.password = password;
+        try {
+            System.out.println("Введите логин");
+            this.login = reader.readLine();
+            System.out.println("Введите пароль");
+            this.password = reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+    public Basket chooseProducts(Product product) {
 
-    public String getLogin() {
-        return login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public Basket getBasket() {
+        Product[] products = {product};
+        this.basket = new Basket(products);
         return basket;
-    }
-
-    public void setBasket(Basket basket) {
-        this.basket = basket;
     }
 }

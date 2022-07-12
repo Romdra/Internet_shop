@@ -2,10 +2,8 @@ public class DemoShop {
 
     public static void main(String[] args) {
 
-        Authentication myProfile = new Authentication();
+        User user1 = new User();
 
-
-        myProfile.inputLog();
-        myProfile.inputPassword();
+        user1.inputLogPass();
     }
 }
