@@ -1,1 +1,2 @@
-# Education project 
+# Education project. 
+Fist project.
